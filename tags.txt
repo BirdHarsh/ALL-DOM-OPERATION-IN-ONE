@@ -1,0 +1,36 @@
+The <!DOCTYPE> declaration in HTML isn’t a tag per se—it's a declaration that tells the browser what version of HTML the page
+is written in, so it can render it correctly.
+
+root Element- by standard <html> could have only 2 subnodes head and body.
+
+Attribute	Purpose
+lang	Declares the natural language (e.g., en, fr, hi)
+dir	Text direction (ltr for left-to-right, rtl for right-to-left)
+xmlns (for XHTML)	XML namespace declaration (used in XHTML docs)
+
+
+
+
+✅ You Can Use Non-Identifiers — But Here's the Full Picture:
+🔹 Non-Identifier Options You Can Use:
+
+Type	Example	What it targets
+Tag name	getElementsByTagName("div")	All <div> elements
+Name attribute	getElementsByName("username")	All elements with name="username" (commonly used in forms)
+DOM position	document.body.children[0]	First direct child of <body>
+CSS selectors (structure-based)	querySelector("section > p")	First <p> inside a <section>
+Sibling/Parent traversal	element.nextElementSibling or element.parentElement	Relative position in the DOM tree
+Class	getElementsByClassName("card")	All elements with class "card"
+All elements	document.all[5] (⚠️ discouraged)	Access element by index in full page
+
+
+✅ Accessing DOM Elements: With & Without Identifiers
+🔹 1. Using Identifiers (Recommended, Precise)
+
+Method	Selector Type	Example	Use Case
+getElementById()	id	document.getElementById("myBtn")	Fastest & most specific
+getElementsByClassName()	class	document.getElementsByClassName("menu")	Returns an HTMLCollection
+querySelector()	any CSS selector	document.querySelector("#loginBtn")	First matching element
+querySelectorAll()	any CSS selector	document.querySelectorAll(".card")	NodeList of all matches
+
+
