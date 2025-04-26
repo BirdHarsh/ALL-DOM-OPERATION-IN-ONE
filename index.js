@@ -4,7 +4,7 @@ console.log(elem3);
 
 
 // using getElementById
-var elem1 = document.getElementById('myBtn');
+var elem1 = document.getElementById('head');
 console.log(elem1);
 
 // // using getElementsByClassName
